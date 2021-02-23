@@ -13,7 +13,6 @@ export class TitleService {
   constructor(private http: HttpClient) {}
 
   find(title: Title): Observable<any> {
-    console.log(title);
     return this.http.post(this.TITLE_API + '/find', title);
   }
 }

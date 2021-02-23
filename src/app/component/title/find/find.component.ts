@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {Title} from '../../../model/model.title';
 import {Find} from '../../../model/model.find';
 import {TitleService} from '../../../service/title.service';
@@ -11,6 +11,7 @@ import {TitleService} from '../../../service/title.service';
 export class FindComponent implements OnInit {
 
   title: Title;
+  @Output() results = new EventEmitter();
 
   constructor(private titleService: TitleService) {
     this.title = new Title();
@@ -20,9 +21,8 @@ export class FindComponent implements OnInit {
   }
 
   public find(): void {
-    console.log(this.title);
     this.titleService.find(this.title).subscribe((find: Find) => {
-      console.log(find);
+      this.results.emit(find.results);
     });
   }
 }
