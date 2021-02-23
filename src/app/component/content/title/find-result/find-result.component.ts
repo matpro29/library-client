@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Title} from '../../../model/model.title';
+import {Title} from '../../../../model/model.title';
 
 @Component({
   selector: 'app-find-result',

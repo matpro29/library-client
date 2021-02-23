@@ -7,14 +7,20 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
-import { FindComponent } from './component/title/find/find.component';
-import { FindResultComponent } from './component/title/find-result/find-result.component';
+import { FindComponent } from './component/content/title/find/find.component';
+import { FindResultComponent } from './component/content/title/find-result/find-result.component';
+import { ContentComponent } from './component/content/content.component';
+import { ToolbarComponent } from './component/toolbar/toolbar.component';
+import { FooterComponent } from './component/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FindComponent,
-    FindResultComponent
+    FindResultComponent,
+    ContentComponent,
+    ToolbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

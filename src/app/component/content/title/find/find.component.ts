@@ -1,7 +1,7 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
-import {Title} from '../../../model/model.title';
-import {Find} from '../../../model/model.find';
-import {TitleService} from '../../../service/title.service';
+import {Title} from '../../../../model/model.title';
+import {Find} from '../../../../model/model.find';
+import {TitleService} from '../../../../service/title/title.service';
 
 @Component({
   selector: 'app-find',
@@ -23,6 +23,7 @@ export class FindComponent implements OnInit {
   public find(): void {
     this.titleService.find(this.title).subscribe((find: Find) => {
       this.results.emit(find.results);
+      console.log(find);
     });
   }
 }

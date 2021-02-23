@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {Title} from './model/model.title';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +7,4 @@ import {Title} from './model/model.title';
 })
 export class AppComponent {
   title = 'library-client';
-
-  findResults: Title[];
-
-  public setFindResult(results: Title[]): void {
-    this.findResults = results;
-  }
 }
