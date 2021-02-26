@@ -1,8 +1,7 @@
 import {Image} from './model.image';
 
-export class Title {
+export class Person {
   id: string;
   image: Image;
-  title: string;
-  titleType: string;
+  name: string;
 }

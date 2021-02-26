@@ -1,8 +1,19 @@
-<div class="card-container">
-  <div *ngFor="let title of results">
-    <div class="card" *ngIf="title.image">
-      <img src="{{title.image.url}}" style="max-width:100px;width:100%">
+<div class="card-container" *ngIf="find">
+  <h3>Titles</h3>
+  <br>
+  <div *ngFor="let title of find.titles">
+    <div class="card">
+      <img src="{{title.image.url}}" *ngIf="title.image" style="max-width:100px;width:100%">
       {{title.title}}
+    </div>
+  </div>
+  <br>
+  <h3>Persons</h3>
+  <br>
+  <div *ngFor="let person of find.persons">
+    <div class="card">
+      <img src="{{person.image.url}}" *ngIf="person.image" style="max-width:100px;width:100%">
+      {{person.name}}
     </div>
   </div>
 </div>
@@ -28,36 +39,6 @@
 
   p {
     margin: 0;
-  }
-
-  .spacer {
-    flex: 1;
-  }
-
-  .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-  }
-
-  .toolbar img {
-    margin: 0 16px;
-  }
-
-  .toolbar #twitter-logo {
-    height: 40px;
-    margin: 0 16px;
-  }
-
-  .toolbar #twitter-logo:hover {
-    opacity: 0.8;
   }
 
   .content {

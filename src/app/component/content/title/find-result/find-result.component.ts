@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Title} from '../../../../model/model.title';
+import {Find} from '../../../../model/model.find';
 
 @Component({
   selector: 'app-find-result',
@@ -8,7 +8,7 @@ import {Title} from '../../../../model/model.title';
 })
 export class FindResultComponent implements OnInit {
 
-  @Input() results: Title[];
+  @Input() find: Find;
 
   constructor() { }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Title} from '../../model/model.title';
+import {Find} from '../../model/model.find';
 
 @Component({
   selector: 'app-content',
@@ -8,14 +8,14 @@ import {Title} from '../../model/model.title';
 })
 export class ContentComponent implements OnInit {
 
-  findResults: Title[];
+  find: Find;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  public setFindResult(results: Title[]): void {
-    this.findResults = results;
+  public setFindResult(find: Find): void {
+    this.find = find;
   }
 }

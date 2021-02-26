@@ -11,7 +11,7 @@ import {TitleService} from '../../../../service/title/title.service';
 export class FindComponent implements OnInit {
 
   title: Title;
-  @Output() results = new EventEmitter();
+  @Output() findEmitter = new EventEmitter();
 
   constructor(private titleService: TitleService) {
     this.title = new Title();
@@ -22,7 +22,7 @@ export class FindComponent implements OnInit {
 
   public find(): void {
     this.titleService.find(this.title).subscribe((find: Find) => {
-      this.results.emit(find.results);
+      this.findEmitter.emit(find);
       console.log(find);
     });
   }
