@@ -1,4 +1,5 @@
 import {Image} from './model.image';
+import {KnowFor} from './knowFor.model';
 
 export class Title {
   id: string;
@@ -11,4 +12,8 @@ export class Title {
   title: string;
   titleType: string;
   year: string;
+
+  legacyNameText: string;
+  name: string;
+  knownFor: KnowFor[];
 }
