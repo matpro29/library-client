@@ -2,7 +2,7 @@
   <h3>Titles</h3>
   <br>
   <div *ngFor="let title of find.titles">
-    <div class="card">
+    <div class="card" (click)="add(title)">
       <img src="{{title.image.url}}" *ngIf="title.image" style="max-width:100px;width:100%">
       {{title.title}}
     </div>

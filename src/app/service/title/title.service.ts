@@ -15,4 +15,9 @@ export class TitleService {
   find(title: Title): Observable<any> {
     return this.http.post(this.TITLE_API + '/find', title);
   }
+
+
+  add(title: Title): Observable<any> {
+    return this.http.post(this.TITLE_API + '/add', title);
+  }
 }
